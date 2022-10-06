@@ -51,17 +51,14 @@ body {
     margin-bottom: 30px;
 }
 
-.info {
-    display: flex;
-    border-radius: 4px;
-    font-size: 12px;
-    font-size: 1.2rem;
-    font-family: "sofia-pro-regular";
-    background-color: #EFF6FB;
-    height: 44px;
-    color: #1E4346;
+.info a {
+    background: 0 0;
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 24px;
     padding: 12px 9px 12px 12px;
-    align-items: center;
+    padding-bottom: 30px;
 }
 
 .info svg {
@@ -79,13 +76,18 @@ body {
 
 .hv-units__measure {
     font-family: "sofia-pro-bold";
-    background-color: #CCE8DE;
-    color: #232E37;
-    box-shadow: none;
-    flex: 0 0 142px;
+    width: 142px;
     padding: 10px !important;
     margin-right: 15px;
-    border-radius: 4px !important;
+    background-color: #000 !important;
+    color: #fff;
+    box-shadow: none;
+    border-radius: 100px !important;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 1px solid #e4e6ee;
+    font-weight: 400;
 }
 
 span.unit-text {
@@ -111,7 +113,8 @@ span.unit-text {
     align-items: center;
 }
 
-.hv-total.hv-total-w, .hv-total.hv-total-h {
+.hv-total.hv-total-w,
+.hv-total.hv-total-h {
     flex: 1;
     margin-right: 25px;
     margin-bottom: 0px;
@@ -249,18 +252,20 @@ p.paper-size-note {
     border: 1px solid #e7e7e7;
     box-shadow: 0px 2px 50px rgb(0 0 0 / 10%);
     height: fit-content;
+    font-size: 0;
 }
 
 .form__wrap__right-img img {
     width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+
 }
 
 .form__wrap__right-product {
     display: flex;
     margin-bottom: 15px;
-    padding: 12px 20px;
+    padding: 12px 44px;
     background-color: #2A3947;
     font-size: 12px;
     line-height: 1;
@@ -272,6 +277,7 @@ p.paper-size-note {
     font-size: 14px;
     display: flex;
     justify-content: space-around;
+    display: none;
 }
 
 .hv-val {
@@ -297,41 +303,42 @@ p.paper-size-note {
     padding: 15px 0;
     border-bottom: 1px solid #eee;
     font-size: 13px;
+    background: #eef8f4;
+  
 }
 
 span.subtotal {
     display: flex;
     justify-content: space-between;
     margin: 0 25px;
-    padding: 15px 0;
+    padding: 15px 14px;
     border-bottom: 1px solid #eee;
     flex-wrap: wrap;
     font-weight: 500;
+    align-items: center;
+    font-size: 16px;
+    text-align: end;
+
 }
 
-span.total.subtotal {
-    margin: 0 10px;
-    padding: 15px;
-    background-color: #EEF8F4;
-    color: #1E4346;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
+.free-shipping {
+    font-size: 14px;
+    line-height: 24px;
+    background: #c4e8db;
+    border-radius: 100px;
+    padding: 8px 16px;
+
 }
+
 
 .btn button {
     display: inline-block;
     padding: 10px 24px;
-    background-color: transparent;
     border: 2px solid transparent;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
     font-family: "sofia-pro-bold";
-    font-size: 15px;
-    font-size: 1.5rem;
     text-align: center;
     letter-spacing: .01em;
-    color: #1D1D1B;
     transition: linear 0.1s;
     cursor: pointer;
     width: 100%;
@@ -340,6 +347,9 @@ span.total.subtotal {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     color: white;
     font-size: 15px;
+    margin-top: 50px;
+        opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .container {
@@ -353,6 +363,7 @@ span.total.subtotal {
     position: relative;
     background-color: #232E37;
     color: white;
+    margin-left: 20px;
 }
 
 .hv-paper-size img {
@@ -385,3 +396,70 @@ h3.quote-form-fields__title {
     line-height: 26px;
     margin-bottom: 35px;
 }
+
+.country {
+    display: none;
+}
+
+select#quote_preview_order_country {
+    cursor: pointer;
+    border: 1px solid #e4e6ee;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px;
+    height: auto;
+    background: #f8f8f8;
+    margin: 10px auto;
+}
+
+
+/* # Mobile..... */
+@media only screen and (max-width: 480px) {
+    .hv__wrap__icons {
+        display: none;
+    }
+
+    .form__wrap {
+        display: block;
+    }
+
+    .form__wrap__right {
+        max-width: 100%;
+        padding-bottom: 164px;
+    }
+
+    .country {
+        display: block;
+    }
+
+    .hv-total-h-w {
+        display: block;
+    }
+
+    .hv-units__measure {
+        flex: 1 1 50%;
+    }
+
+    .hv-total.hv-total-w,
+    .hv-total.hv-total-h {
+        margin: 0;
+    }
+
+    h3.quote-form-fields__title {
+        padding: 0 25px;
+    }
+    .form__wrap__right-product__price{
+        padding: 15px 14px;
+    }
+
+}
+
+/* 
+# Tablet
+only screen and (min-width: 768px) 
+
+# Desktop
+only screen and (min-width: 992px)
+
+# Huge
+only screen and (min-width: 1280px)  */
