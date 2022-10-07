@@ -50,6 +50,7 @@ body {
 .hv-paper-type {
     background: #f8f8f8;
     border-radius: 8px;
+    padding: 25px;
 
 }
 
@@ -94,6 +95,7 @@ body {
     text-align: center;
     border: 1px solid #e4e6ee;
     font-weight: 400;
+    cursor: pointer;
 }
 
 span.unit-text {
@@ -194,7 +196,7 @@ h1.hv__bannner__title {
     align-items: center;
     font-size: 36.50px;
     font-weight: 500;
-    margin-bottom: 39px;
+    margin: 35px 0;
     color: #1D1D1B;
     text-align: center;
 }
@@ -234,9 +236,9 @@ h1.hv__bannner__title {
 p.paper-size-note {
     margin: 25px 0;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
-    text-align: start;
+    text-align: center;
 }
 
 .form__wrap {
@@ -268,7 +270,8 @@ p.paper-size-note {
 .form__wrap__right-product {
     display: flex;
     margin-bottom: 15px;
-    padding: 12px 44px;
+    padding: 12px 14px;
+    font-size: 16px;
     background-color: #2A3947;
     font-size: 12px;
     line-height: 1;
@@ -322,7 +325,8 @@ span.subtotal {
     margin-right: 16px;
 
 }
-.subtotal b{
+
+.subtotal b {
     font-weight: 500;
 }
 
@@ -355,10 +359,12 @@ span.subtotal {
     margin-top: 50px;
     opacity: 0.5;
     cursor: not-allowed;
+    font-size: 16px;
 }
 
 .hv-paper-size {
     max-width: 150px;
+    padding-right: 8px;
 
 }
 
@@ -367,15 +373,16 @@ span.subtotal {
     box-sizing: border-box;
     border-radius: 4px;
     width: 100%;
+    cursor: pointer;
 }
 
 .hv-paper-item {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 25px;
 }
 
-p.quote-form-fields__paper-type-name {
+button.quote-form-fields__paper-type-name {
     background: #fff;
     border: 1px solid #e4e6ee;
     padding: 8px 16px;
@@ -388,6 +395,7 @@ p.quote-form-fields__paper-type-name {
     max-width: 130px;
     color: #1D1D1B;
     font-family: "sofia-pro-regular";
+    cursor: pointer;
 }
 
 .quote-form-fields__paper-type-name.active {
@@ -405,15 +413,16 @@ p#paper-type-info {
 h3.quote-form-fields__title {
     font-size: 22px;
     line-height: 26px;
-    margin-bottom: 35px;
-    padding: 18px 20px;
+    border-bottom: 1px solid #e4e6ee;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
 }
 
 .country {
     display: none;
 }
 
-select#quote_preview_order_country {
+.country .select {
     cursor: pointer;
     border: 1px solid #e4e6ee;
     box-sizing: border-box;
@@ -422,6 +431,14 @@ select#quote_preview_order_country {
     height: auto;
     background: #f8f8f8;
     margin: 10px auto;
+    font-size: 14px;
+}
+
+.subtotal.shipping>span.val {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -460,7 +477,8 @@ select#quote_preview_order_country {
     }
 
     h3.quote-form-fields__title {
-        padding: 0 20px;
+        padding: 0;
+        margin: 16px 0;
     }
 
     .form--wrap {
@@ -476,11 +494,20 @@ select#quote_preview_order_country {
     }
 
     span.subtotal.shipping {
-        max-width: 310px;
+        text-align: start;
     }
 
-    select#quote_preview_order_country {
+ .country .select{
         width: 100%;
+    }
+
+    .info a {
+        padding: 0;
+    }
+
+    p.quote-form-fields__paper-type-name {
+        font-size: 11px;
+        margin: 16px 0;
     }
 }
 
@@ -503,6 +530,10 @@ select#quote_preview_order_country {
 
     h3.quote-form-fields__title {
         padding-left: 28px;
+    }
+
+    .hv-units__measure {
+        flex: 1 1 50%;
     }
 
 }
